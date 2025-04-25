@@ -6,7 +6,6 @@ __pycache__/
 env/
 
 # Data
-models/
 !models/README.md  # Keep this file
 
 # IDE
