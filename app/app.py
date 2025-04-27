@@ -46,13 +46,13 @@ recommendations = {
 }
 
 # Welcome message
-st.title("🐄 East Coast Fever Risk Predictor")
-st.markdown("**Welcome, Ugandan Farmer!** This tool helps you keep your cattle safe from East Coast Fever (ECF), a dangerous disease spread by ticks. Answer a few simple questions about your farm, and we’ll tell you if your cattle are at risk.")
+st.title("🐄 TickNet AI")
+st.markdown("**Welcome, to TickNet AI!** This tool helps you keep your cattle safe from East Coast Fever (ECF).")
 
 # Language selection
 language = st.selectbox("Choose Language / Okulonda Olulimi", ["English", "Luganda"])
 if language == "Luganda":
-    st.markdown("**Tukusanyukidde, Omulimi!** Ekiwandiko kino kikuyamba okukuumira ente zo okuva ku Bulwade bwa East Coast (ECF). Balirira ebibuuzo ebyangu ku mutala gw’ eng'ombe zo, tujja kukutegeeza oba ente zo ziri mu kabi.")
+    st.markdown("**Tukusanyukidde, Omulimi!** Ekiwandiko kino kikuyamba okukuumira ente zo okuva ku Bulwade bwa East Coast (ECF).")
 
 # Show sample table format for file upload
 st.markdown("### File Format for Uploading Data" if language == "English" else "### Ekyokulabirako Eky’ekiwandiiko Eky’okutikka")
@@ -62,9 +62,9 @@ st.markdown("""
 | 0.5   | 0.005     | 45.0   | 29.0        |
 """)
 st.markdown(
-    "If you’re uploading a file, make sure it matches the format above with columns: Ticks, Buffaloes, Cattle, Temperature. The system will not work if the format is different."
+    "If you’re uploading a file, make sure it matches the format above with columns: Ticks, Buffaloes, Cattle, Temperature."
     if language == "English"
-    else "Obanga otikka fayiro, gulumiza nti efanana n’ekyokulabirako waggulu nga erina ebibagiro: Enkwa, Embogo, Ente, Obutiti. Ekikozesebwa tekizakola obanga ekika ky’ekiwandiiko ky’enjawulo."
+    else "Obanga otikka fayiro, gulumiza nti efanana n’ekyokulabirako waggulu nga erina ebibagiro: Enkwa, Embogo, Ente, Obutiti."
 )
 
 # Input section
@@ -362,10 +362,10 @@ if st.button(feedback_label):
 # Footer
 st.markdown("""
 **Need help?** Contact your local veterinary officer  
-**Emergency:** Call the Uganda Veterinary Helpline at 0800-123-456   
-Built with ❤️ for Ugandan farmers
+**Emergency:** Call the Veterinary Helpline at 0800-123-456   
+Built with ❤️ for Cattle farmers
 """ if language == "English" else """
 **Oyinza okwetaaga obuyambi?** Saba obuyambi ku muweereza w’ eddagala ly’ emyala mu bitundu byo  
-**Eby’ okuddaabiriza:** Kubba ku Uganda Veterinary Helpline ku 0800-123-456  
-Ekikozesebwa kino kyakolebwa n’ omukwano ❤️ eri abalimi b’ e Uganda
+**Eby’ okuddaabiriza:** Kubba ku Veterinary Helpline ku 0800-123-456  
+Ekikozesebwa kino kyakolebwa n’ omukwano ❤️ eri abalunzi b’ ente
 """)
